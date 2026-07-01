@@ -2,6 +2,8 @@
 
 This workspace sets up a Pi coding-agent run against the largest Oolong synthetic benchmark examples using the local recursive-decomposition skill.
 
+For a direct rerun of the 20-task test, start with `RUN_PI_OOLONG_20.md`. It contains the exact setup, materialization, Pi RPC, and scoring commands.
+
 ## Current Layout
 
 Root:
