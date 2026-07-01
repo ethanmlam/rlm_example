@@ -9,9 +9,10 @@ Root:
 - `recursive-decomposition/` - local skill/plugin source.
 - `oolong-pairs/` - cloned from `https://github.com/zircote/oolong-pairs.git`.
 - `oolong-pairs/data/pi_eval/` - clean task inputs and Pi output from this experiment.
+- `artifacts/pi_eval_20/` - committed lightweight artifacts from the later 20-task Pi/Oolong run.
 - `.env` - local secret file. Do not read, copy, commit, or share.
 
-The original `oolong/` and `rlm/` paths are git submodules in `.gitmodules`, but they are not needed for this Pi-only test.
+The original `oolong/` and `rlm/` submodules are not needed for this Pi-only test. The only submodule kept in `.gitmodules` is `oolong-pairs`.
 
 ## Prerequisites
 
@@ -237,6 +238,21 @@ Expected gold for the five tasks:
 22000267 78832
 22000266 23477
 ```
+
+## Largest 20 Task Run
+
+The later 20-task run used the same `trec_coarse` context window and wrote lightweight, committed artifacts under `artifacts/pi_eval_20/`:
+
+- `questions.json` - the 20 selected tasks without gold answers.
+- `instructions.md` - the prompt/instructions used for the decomposition run.
+- `chunk_summaries_isolated.jsonl` - isolated chunk summaries from Pi-generated reduction.
+- `pi_generated_reducer.py` - reducer script generated during the Pi run.
+- `pi_results.json` - final reduced answers.
+- `pi_results_score.json` - local score against gold after the candidate was written.
+
+Score with answer-type-aware normalization: `12/20`.
+
+Important caveat: Pi decomposed the context into chunks and generated the reducer, but it did not autonomously finish by writing `pi_results.json`. The final result file was reduced locally from the Pi-generated chunk summary. User-frequency answers were exact from parsed `User:` fields; label-count answers were heuristic because the context includes question text, not explicit TREC labels.
 
 ## Safety Notes
 

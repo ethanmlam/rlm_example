@@ -1,0 +1,154 @@
+{
+  "answers": [
+    {
+      "id": "22000270",
+      "answer": "Label: human being",
+      "method": "heuristic user 94127 label counts; ties broken by prompt label order",
+      "confidence": "low"
+    },
+    {
+      "id": "22000269",
+      "answer": "Label: entity",
+      "method": "heuristic user 94127 label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000268",
+      "answer": "User: 89348",
+      "method": "exact reduction of chunked user counts",
+      "confidence": "high"
+    },
+    {
+      "id": "22000267",
+      "answer": "User: 78832",
+      "method": "exact reduction of chunked user counts",
+      "confidence": "high"
+    },
+    {
+      "id": "22000266",
+      "answer": "Answer: 36752",
+      "method": "heuristic TREC coarse-label classification reduced from chunks",
+      "confidence": "low"
+    },
+    {
+      "id": "22000265",
+      "answer": "Answer: 25355",
+      "method": "heuristic TREC coarse-label classification reduced from chunks",
+      "confidence": "low"
+    },
+    {
+      "id": "22000264",
+      "answer": "Answer: 4116",
+      "method": "heuristic TREC coarse-label classification reduced from chunks",
+      "confidence": "low"
+    },
+    {
+      "id": "22000263",
+      "answer": "Answer: 5152",
+      "method": "heuristic TREC coarse-label classification reduced from chunks",
+      "confidence": "low"
+    },
+    {
+      "id": "22000262",
+      "answer": "Answer: 16309",
+      "method": "heuristic TREC coarse-label classification reduced from chunks",
+      "confidence": "low"
+    },
+    {
+      "id": "22000261",
+      "answer": "Answer: 14474",
+      "method": "heuristic TREC coarse-label classification reduced from chunks",
+      "confidence": "low"
+    },
+    {
+      "id": "22000260",
+      "answer": "Answer: description and abstract concept is less common than entity",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000259",
+      "answer": "Answer: human being is less common than entity",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000258",
+      "answer": "Answer: human being is less common than description and abstract concept",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000257",
+      "answer": "Answer: location is less common than entity",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000256",
+      "answer": "Answer: location is less common than description and abstract concept",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000255",
+      "answer": "Answer: numeric value is less common than entity",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000254",
+      "answer": "Answer: numeric value is less common than description and abstract concept",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000253",
+      "answer": "Answer: numeric value is more common than human being",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000252",
+      "answer": "Answer: numeric value is more common than location",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    },
+    {
+      "id": "22000251",
+      "answer": "Answer: abbreviation is less common than entity",
+      "method": "comparison of heuristic chunk label counts",
+      "confidence": "low"
+    }
+  ],
+  "notes": {
+    "source": "Reduced from Pi-generated chunk_summaries.jsonl after Pi failed to emit pi_results.json autonomously.",
+    "chunk_count": 21,
+    "chunk_size": 5000,
+    "grand_total_instances": 102158,
+    "label_counts": {
+      "entity": 36752,
+      "description and abstract concept": 25355,
+      "human being": 4116,
+      "location": 5152,
+      "abbreviation": 14474,
+      "numeric value": 16309
+    },
+    "user_94127_label_counts": {
+      "entity": 10,
+      "description and abstract concept": 4,
+      "human being": 0,
+      "location": 0,
+      "abbreviation": 1,
+      "numeric value": 2
+    },
+    "user_94127_least_common_tie": [
+      "human being",
+      "location"
+    ],
+    "caveat": "User-frequency tasks are exact from parsed User fields. Label tasks are heuristic because labels were inferred from question text.",
+    "workspace_chunk_summaries": "data/pi_eval_20/chunk_summaries_isolated.jsonl",
+    "workspace_reducer_script": "data/pi_eval_20/pi_generated_reducer.py",
+    "score_file": "data/pi_eval_20/pi_results_score.json"
+  }
+}
