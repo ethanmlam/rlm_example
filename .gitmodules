@@ -1,0 +1,6 @@
+[submodule "rlm"]
+	path = rlm
+	url = git@github.com:alexzhang13/rlm.git
+[submodule "oolong"]
+	path = oolong
+	url = git@github.com:abertsch72/oolong.git
